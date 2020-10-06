@@ -1,5 +1,12 @@
 #!/bin/bash
 
+if [ -d "./node_modules" ]
+then
+    echo "exists..."
+else
+  npm install
+fi
+
 # Variables.
 ENV_FILE=$PWD/.env
 
