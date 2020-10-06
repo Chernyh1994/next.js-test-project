@@ -4,9 +4,6 @@ module.exports = {
   },
   purge: {
     layers: ['utilities'],
-    content: [
-      './pages/**/*.tsx',
-      './components/**/*.tsx'
-    ],
+    content: ['./pages/**/*.tsx', './components/**/*.tsx'],
   },
 }
