@@ -1,7 +1,7 @@
 version: '3'
 services:
 
-  # Next js.
+  # Next.js
   nextjs:
     container_name: nextjs
     build:
@@ -11,3 +11,14 @@ services:
     restart: unless-stopped
     volumes:
       - ./:/var/www
+
+  # Mongodb
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+      - 27017:27017
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "${MONGO_INITDB_ROOT_USERNAME}"
+      MONGO_INITDB_ROOT_PASSWORD: "${MONGO_INITDB_ROOT_PASSWORD}"
