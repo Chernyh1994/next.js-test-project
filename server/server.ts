@@ -1,5 +1,9 @@
 import App from './app'
 import configContainer from './config'
 
-const app: App = new App({configContainer})
-app.startup();
+const appConfig = configContainer.resolve('appConfig')
+
+const app: App = new App(appConfig)
+
+app.startup()
+app.listen()

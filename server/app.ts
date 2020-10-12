@@ -23,7 +23,6 @@ class App {
           return app.render(req, res, '/test', req.query)
         })
         this.server.all('*', (req: Request, res: Response) => handle(req, res))
-        this.listen()
       })
       .catch((error) => {
         console.error(error)
@@ -31,7 +30,7 @@ class App {
       })
   }
 
-  private listen() {
+  public listen() {
     this.server.listen(this.appConfig.port, () => {
       console.log(`App listening on the http://localhost:${this.appConfig.port}`)
     })
