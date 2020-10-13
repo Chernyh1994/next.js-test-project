@@ -9,4 +9,4 @@ mongoose.connection
     const info = mongoose.connections[0];
     console.log(`Connected to ${info.host}:${info.port}/${info.name}`);
   });
-mongoose.connect('mongodb://localhost:27017/admin');
+mongoose.connect('mongodb://localhost:27017/test_db');
